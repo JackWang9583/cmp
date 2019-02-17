@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/fullpage.min.css">
+    <link rel="stylesheet" href="css/vue-photo-preview.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="js/zepto.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/fullpage.min.js"></script>
+    <script src="js/vue-photo-preview.js"></script>
+</head>
+<body>
+    <div id="app">
+				<!--单个-->
+				<p>单个</p>
+				<div class="item">
+					<!-- <img v-for="item in img1" :src="item" preview="1" preview-text="描述文字"> -->
+				</div>
+				<!--分组-->
+				<p>分组</p>
+				<div class="item2">
+					<img src="imgs/gcal/2.png" preview="2" preview-text="描述文字">
+					<img src="imgs/gcal/2.png" preview="2" preview-text="描述文字2">
+				</div>
+
+				<p>大图</p>
+				<div class="item2">
+					<img src="imgs/gcal/2.png" large="imgs/gcal/2.png" preview="2" preview-text="描述文字">
+				</div>
+		</div>
+    <script>
+    var options={
+				fullscreenEl:false, //关闭全屏按钮
+			}
+			
+			Vue.use(vuePhotoPreview,options)
+			
+			var vm=new Vue({
+				el:'#app',
+				// data:{
+				// 	img1:[]
+				// },
+				mounted:function(){
+					//异步插入的图片
+					setTimeout(() => {
+						// vm.img1.push('imgs/gcal/2.png')
+						// vm.$previewRefresh()
+					}, 2000);
+
+					//图片查看器打开后，打印本次查看器的实例（事件、方法、属性的示例）
+					this.$preview.on('imageLoadComplete',(e,item)=>{
+						console.log(this.$preview.self)
+					})
+				}
+			})
+    </script>
+</body>
+</html>

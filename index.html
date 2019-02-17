@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/fullpage.min.css">
+    <link rel="stylesheet" href="css/vue-photo-preview.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="js/zepto.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/fullpage.min.js"></script>
+    <script src="js/vue-photo-preview.js"></script>
+</head>
+
+<body>
+    <div id="body" class="section">
+        <div class="page page-first active">
+            <div class="cont no-bg">
+                <div class="xc">企业宣传</div>
+                <div class="txt">公司简介/产品介绍/招商合作</div>
+                <div class="txt cmpName">武汉冠辉实验设备有限公司</div>
+            </div>
+            <div class="top"><img src="imgs/t_bg.webp"></div>
+            <div class="bottom"><img src="imgs/b_bg.webp"></div>
+        </div>
+        <div class="page">
+            <div class="cont">
+                <div class="btn_title">公/司/简/介</div>
+                <div class="gsjj-img"><img src="imgs/gsjj.jpg"></div>
+                <div class="gsjj-txt txt">
+                    武汉冠辉实验设备有限公司成立于2013年，是一家集实验室整体规划与建设、实验室设备的生产与安装、实验室工程售后维修服务于一体的专业现代化实验室建设高新企业。
+                    长期注重企业的科技进步，拥有一支国家科研单位，设计院所，高等院校的专家教授及本公司技术人员组成的研制队伍。引进美国，丹麦，德国，意大利，日本等国先进技术及生产线的基础上，并顺应中国市场的发展形势，开发研制了一系列适应各种不同专业的现代实验室装备。
+                </div>
+            </div>
+            <div class="top"><img src="imgs/t_bg.webp"></div>
+            <div class="bottom"><img src="imgs/b_bg.webp"></div>
+        </div>
+        <div class="page">
+            <div class="cont">
+                <div class="btn_title">工/程/案/例</div>
+                <div class="gcal">
+                    <div class="img"><img src="imgs/gcal/1.png" preview="1" preview-text="作为长期性的实验室用房，定期的维护检修影响装饰面效果的情况客观存在"></div>
+                </div>
+                <div class="gcal">
+                    <div class="img"><img src="imgs/gcal/2.png" preview="1" preview-text="为解决这一情况，设计过程中已考虑该区域的饰面材料尽量为可装拆类型"></div>
+                    <div class="img"><img src="imgs/gcal/3.png" preview="1" preview-text="施工过程中要注意选材时的耐久性，抗变形能力的考虑"></div>
+                </div>
+                <div class="gcal">
+                    <div class="img"><img src="imgs/gcal/4.jpg" preview="1" preview-text="底部固定及固定收边位一定要牵固安装好不能临时性实施"></div>
+                    <div class="img"><img src="imgs/gcal/5.jpg" preview="1" preview-text="装饰材料不可重复拆除、安装此等做法为保持原貌这类现象"></div>
+                </div>
+            </div>
+            <div class="top"><img src="imgs/t_bg.webp"></div>
+            <div class="bottom"><img src="imgs/b_bg.webp"></div>
+        </div>
+        <div class="page">
+            <div class="cont">
+                <div class="btn_title">联/系/我/们</div>
+                <div class="lxwm txt">联系电话：027-82918688</div>
+                <div class="lxwm txt">地址：武汉市江岸区航天双城C2栋</div>
+                <div class="lxwm txt">邮箱：whguanhui@163.com</div>
+                <div class="lxwm txt">邮政编码：432244</div>
+            </div>
+            <div class="top"><img src="imgs/t_bg.webp"></div>
+            <div class="bottom"><img src="imgs/b_bg.webp"></div>
+        </div>
+        <div v-if="touchNum < 3" class="to_next"><img src="imgs/top.png"></div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
